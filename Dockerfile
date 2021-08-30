@@ -7,6 +7,7 @@ ARG download=0.12.1-all-bin
 
 RUN wget https://downloads.apache.org/iotdb/$version/apache-iotdb-$download.zip && \
 unzip apache-iotdb-$download.zip && \
-mv apache-iotdb-$download iotdb
+mv apache-iotdb-$download iotdb && \
+rm -rf apache-iotdb-$download.zip
 
 WORKDIR /opt/sh/iotdb
